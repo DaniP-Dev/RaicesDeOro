@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+'use client';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,14 +12,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Raíces de Oro",
-  description:
-    "Descubre cómo llevar productos colombianos al mercado internacional. Impulsamos el talento local, conectamos tu emprendimiento al mundo y promovemos la exportación de productos auténticos.",
-  robots: "index,follow",
-  viewport: "width=device-width, initial-scale=1",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,6 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+        <title>Raíces de Oro</title>
+        <meta name="description" content="Descubre cómo llevar productos colombianos al mercado internacional" />
+        <meta name="robots" content="index,follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
