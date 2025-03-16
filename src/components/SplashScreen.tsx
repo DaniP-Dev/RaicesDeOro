@@ -10,7 +10,7 @@ const SplashScreen = ({ onFinish }: { onFinish: () => void }) => {
   return (
     <>
       <div className="fixed inset-0 flex items-center justify-center bg-white">
-        <img src="/imgRaices.jpg" alt="Logo" className="w-64 h-auto" />
+        <img src="/Raices.png" alt="Logo" className="w-64 h-auto" />
       </div>
     </>
   );
