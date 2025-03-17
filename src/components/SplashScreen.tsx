@@ -13,7 +13,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onFinish }) => {
     const timer = setTimeout(() => {
       console.log("✅ SplashScreen finalizado");
       onFinish();
-    }, 1000);
+    }, 2000);
 
     return () => {
       clearTimeout(timer);
