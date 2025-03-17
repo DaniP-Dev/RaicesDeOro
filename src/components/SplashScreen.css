@@ -1,0 +1,65 @@
+/* 📌 Contenedor del SplashScreen: Ocupa toda la pantalla */
+.splash-container {
+  position: fixed; /* Fija la posición en la pantalla */
+  inset: 0; /* Ocupa todo el espacio disponible (top, right, bottom, left) */
+  display: flex; /* Activa Flexbox para centrar contenido */
+  flex-direction: column; /* Organiza elementos en columna (texto arriba, imagen abajo) */
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  background: white; /* Fondo blanco */
+  z-index: 9999; /* Asegura que esté por encima de todo */
+}
+
+/* 📌 Texto "Crece con nosotros" */
+.fade-text {
+  font-size: 2rem; /* Tamaño grande para mejor visibilidad */
+  font-weight: bold; /* Negrita */
+  color: black; /* Color negro */
+  opacity: 0; /* Inicialmente invisible */
+  animation: fadeOut 4s ease-in-out forwards; /* Animación de desvanecimiento en 4 segundos */
+}
+
+/* 📌 Imagen del logo */
+.zoom-image {
+  width: 150px; /* Ancho fijo de la imagen */
+  height: auto; /* Mantiene la proporción */
+  opacity: 0; /* Comienza invisible */
+  animation: fadeIn 4s ease-in-out forwards 4s,
+    /* ⚡ Aparece después de 4s */ zoomIn 1.5s ease-in-out forwards 6s; /* ⚡ Zoom fuerte después de 6s */
+}
+
+/* 📌 Animación de desvanecimiento del texto */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  } /* Comienza visible */
+  100% {
+    opacity: 0;
+  } /* Se desvanece completamente */
+}
+
+/* 📌 Animación para hacer aparecer la imagen */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  } /* Imagen invisible al inicio */
+  100% {
+    opacity: 1;
+  } /* Imagen completamente visible */
+}
+
+/* 📌 Animación de zoom */
+@keyframes zoomIn {
+  0% {
+    transform: scale(1); /* Estado inicial */
+    opacity: 1;
+  }
+  50% {
+    transform: scale(5); /* Aumenta gradualmente */
+    opacity: 1;
+  }
+  100% {
+    transform: scale(10); /* Zoom completo */
+    opacity: 0; /* Se desvanece al final */
+  }
+}

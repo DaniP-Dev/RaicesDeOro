@@ -1,18 +1,18 @@
-"use client"; // Requiere useState y useEffect en el cliente
-import { useEffect, useState } from "react";
+"use client";
+import { useEffect } from "react";
+import "./SplashScreen.css"; // Importa animaciones CSS
 
-const SplashScreen = ({ onFinish }: { onFinish: () => void }) => {
+const SplashScreen = () => {
   useEffect(() => {
-    const timer = setTimeout(() => onFinish(), 5000);
-    return () => clearTimeout(timer);
-  }, [onFinish]);
+    console.log("🟢 SplashScreen iniciado");
+    return () => console.log("🧹 SplashScreen desmontado");
+  }, []);
 
   return (
-    <>
-      <div className="fixed inset-0 flex items-center justify-center bg-white">
-        <img src="/Raices.png" alt="Logo" className="w-64 h-auto" />
-      </div>
-    </>
+    <div className="splash-container">
+      <h1 className="fade-text">Crece con nosotros</h1>
+      <img src="/Raices.png" alt="Logo" className="zoom-image" />
+    </div>
   );
 };
 

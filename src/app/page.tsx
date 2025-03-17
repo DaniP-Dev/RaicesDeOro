@@ -1,5 +1,5 @@
-'use client';
-import {useEffect, useState} from "react";
+"use client";
+import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SplashScreen from "../components/SplashScreen";
@@ -8,12 +8,21 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2000);
+    console.log("🟢 Mostrando SplashScreen...");
+    const timer = setTimeout(() => {
+      setLoading(false);
+      console.log("✅ SplashScreen finalizado, mostrando contenido.");
+    }, 7000); // ⏳ Duración del splash en ms
+
+    return () => {
+      clearTimeout(timer);
+      console.log("🧹 Timer limpiado.");
+    };
   }, []);
 
-  if (loading) return <SplashScreen onFinish={() => setLoading(false)} />;
-
-  return (
+  return loading ? (
+    <SplashScreen />
+  ) : (
     <>
       <div>
         <header>
