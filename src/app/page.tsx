@@ -1,36 +1,53 @@
 "use client";
-import { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SplashScreen from "../components/SplashScreen";
 
-export default function Home() {
-  const [loading, setLoading] = useState(true);
+const Home: React.FC = () => {
+  const [showSplash, setShowSplash] = useState(true);
 
-  useEffect(() => {
-    console.log("🟢 Mostrando SplashScreen...");
-    const timer = setTimeout(() => {
-      setLoading(false);
-      console.log("✅ SplashScreen finalizado, mostrando contenido.");
-    }, 7000); // ⏳ Duración del splash en ms
+  const handleSplashFinish = (): void => setShowSplash(false);
 
-    return () => {
-      clearTimeout(timer);
-      console.log("🧹 Timer limpiado.");
-    };
-  }, []);
-
-  return loading ? (
-    <SplashScreen />
-  ) : (
+  return (
     <>
-      <div>
+      {/* Fallback para usuarios sin JavaScript */}
+      <noscript>
+        <div className="noscript-content">
+          <header>
+            <Header />
+          </header>
+          <main>
+            <section>
+              <article>
+                <h1>Bienvenido</h1>
+                <p>
+                  Este es el contenido principal de la página, el cual se carga
+                  de forma indexable y es visible para los motores de búsqueda.
+                </p>
+              </article>
+            </section>
+          </main>
+          <footer>
+            <Footer />
+          </footer>
+        </div>
+      </noscript>
+
+      <div className="page-container">
+        {showSplash && <SplashScreen onFinish={handleSplashFinish} />}
         <header>
           <Header />
         </header>
         <main>
           <section>
-            <article>Hola</article>
+            <article>
+              <h1>Bienvenido</h1>
+              <p>
+                Este es el contenido principal de la página, el cual se carga de
+                forma indexable y es visible para los motores de búsqueda.
+              </p>
+            </article>
           </section>
         </main>
         <footer>
@@ -39,4 +56,6 @@ export default function Home() {
       </div>
     </>
   );
-}
+};
+
+export default Home;
