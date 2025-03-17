@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./SplashScreen.css";
 
 interface SplashScreenProps {
@@ -7,29 +7,56 @@ interface SplashScreenProps {
 }
 
 const SplashScreen: React.FC<SplashScreenProps> = ({ onFinish }) => {
+  // 'phase': 1 = fase 1 (texto); 2 = fase 2 (logo + subtítulo)
+  // 'fadeOut': activa el desvanecimiento general del splash.
+  const [phase, setPhase] = useState(1);
+  const [fadeOut, setFadeOut] = useState(false);
+
   useEffect(() => {
-    console.log("🟢 SplashScreen iniciado");
-    // Se cierra a los 1.3 segundos (0.2 s antes de que termine el zoom de la imagen a 1.5 s)
-    const timer = setTimeout(() => {
-      console.log("✅ SplashScreen finalizado");
+    // Fase 1 dura hasta 3 segundos.
+    const phaseTimer = setTimeout(() => {
+      setPhase(2);
+    }, 3000);
+
+    // Activa el fade-out del splash a los 5.5 segundos.
+    const fadeOutTimer = setTimeout(() => {
+      setFadeOut(true);
+    }, 5500);
+
+    // Finaliza el splash a los 6 segundos.
+    const finishTimer = setTimeout(() => {
       onFinish();
-    }, 2000);
+    }, 6000);
 
     return () => {
-      clearTimeout(timer);
-      console.log("🧹 Timer limpiado.");
+      clearTimeout(phaseTimer);
+      clearTimeout(fadeOutTimer);
+      clearTimeout(finishTimer);
     };
   }, [onFinish]);
 
   return (
-    <div className="splash-container" aria-label="Pantalla de bienvenida">
+    <div
+      className={`splash-container${fadeOut ? " fade-out" : ""}`}
+      aria-label="Pantalla de bienvenida"
+    >
       <button className="skip-button" onClick={onFinish}>
         Saltar
       </button>
-      <div className="splash-content">
-        <img src="/Raices.png" alt="Logo de la marca" className="zoom-image" />
-        <h2 className="subtitle">Crezcamos juntos</h2>
-      </div>
+      {phase === 1 && (
+        <div className="phase phase1">
+          <p className="phase1-text">
+            <span className="line1">Raíces de Oro.</span>
+            <span className="line2">Tesoros culturales Hechos a Mano.</span>
+          </p>
+        </div>
+      )}
+      {phase === 2 && (
+        <div className="phase phase2">
+          <img src="/Raices.png" alt="Logo de raíces" className="logo" />
+          <h2 className="subtitle">Crezcamos juntos</h2>
+        </div>
+      )}
     </div>
   );
 };
