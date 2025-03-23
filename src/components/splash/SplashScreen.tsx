@@ -33,7 +33,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onFinish }) => {
       className={`splash-container${fadeOut ? " fade-out" : ""}`}
       aria-label="Pantalla de bienvenida"
     >
-      <button className="skip-button" onClick={onFinish}>
+      <button className="skip-button p-2" onClick={onFinish}>
         Saltar
       </button>
       {/* Fase 1: Texto en dos líneas fijas */}

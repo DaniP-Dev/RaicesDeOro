@@ -1,0 +1,22 @@
+/* Estilos generales */
+.hero-section {
+  width: 100%;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white; /* Para que el texto sea legible */
+}
+
+.hero-mobile {
+  background-image: url("./fondoMobil.png"); /* Misma carpeta */
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-desktop {
+  background-image: url("./fondoHero.jpeg"); /* Misma carpeta */
+  background-size: cover;
+  background-position: center;
+}
