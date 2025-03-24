@@ -8,13 +8,7 @@ const HeroeSection = () => {
       <div className="d-block d-lg-none hero-section hero-mobile w-full">
         <div
           className="pt-60 flex flex-col items-center justify-center text-center"
-          style={{
-            backgroundImage: "url('your-image.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            color: "white",
-            textShadow: "0px 2px 4px rgba(0, 0, 0, 0.8)",
-          }}
+          
         >
           {/* inicio contenido Hero */}
           <h1 className="text-3xl font-bold mb-4">
