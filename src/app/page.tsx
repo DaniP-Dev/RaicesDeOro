@@ -3,8 +3,9 @@ import React, { useState, useEffect } from "react";
 import Header from "@/components/header/Header";
 import HeroeSection from "@/pages/heroe/HeroeSection";
 import SplashScreen from "@/components/splash/SplashScreen";
-import Servicio from "@/pages/servicioPrestado/Servicio"
+import Servicio from "@/pages/servicioPrestado/Servicio";
 import About from "@/pages/about/About";
+import Aliados from "@/pages/aliados/Aliados";
 
 const Page = () => {
   const [showSplash, setShowSplash] = useState(true);
@@ -39,14 +40,16 @@ const Page = () => {
           <HeroeSection />
         </div>
         <div>
-          <Servicio/>
+          <Servicio />
         </div>
 
         <div>
-          <About/>
-
+          <About />
         </div>
 
+        <div>
+          <Aliados />
+        </div>
       </div>
     </>
   );

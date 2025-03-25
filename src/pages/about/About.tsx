@@ -6,18 +6,18 @@ const About = () => {
     <>
       {/* Div para desktop */}
       <div className="max-md:hidden">
-        <div className=""></div>
+        <div className="">escritorio</div>
       </div>
 
       {/* Div para celulares */}
-      <div className="lg:hidden bg-amber-100 pt-5">
+      <div className="lg:hidden bg-amber-100 pt-4">
         <div className="text-center mb-5">
           <h1 className="negrita underline ">Raíces de Oro</h1>
           <h6 className="letraOro">Tesoros culturales</h6>
         </div>
         <div className="grid grid-rows-1 gap-5">
           <div className="text-center">
-            <h1 className="negrita">Mision</h1>
+            <h1 className="negrita">Misión</h1>
             <div className="text-black flex items-center justify-center mx-4">
               <p>
                 Facilitamos la conexión entre emprendimientos artesanales y
@@ -33,7 +33,7 @@ const About = () => {
           </div>
 
           <div className="text-center">
-            <h1 className="negrita">Vision</h1>
+            <h1 className="negrita">Visión</h1>
             <div className="text-black flex items-center justify-center mx-4">
               <p>
                 Ser reconocidos globalmente como el puente que conecta la

@@ -9,3 +9,16 @@
   height: 150px;
   border-radius: 50%;
 }
+
+.negrita {
+  color: rgb(236, 124, 48);
+  font-weight: bold;
+}
+
+.letraOro {
+  color: rgb(236, 124, 48);
+}
+
+colorORO {
+  color: rgba(227, 174, 60);
+}

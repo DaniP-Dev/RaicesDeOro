@@ -53,8 +53,8 @@ const Servicio = () => {
         {/* Div para celulares */}
         <div className="lg:hidden h-full">
           <div className="text-center mb-4 mt-4">
-            <h1>Servicios</h1>
-            <h3>Crece con nosotros</h3>
+            <h1 className="negrita underline">Servicios</h1>
+            <h6 className="letraOro">Tenemos para ti...</h6>
           </div>
 
           <div className="flex flex-col items-center justify-center gap-4">
@@ -64,8 +64,8 @@ const Servicio = () => {
                   <div className="flex items-center justify-center bg-[#E3AE3C] imgServiceMobile">
                     <img src="/ecomerce.png" alt="ecomerce" />
                   </div>
-                  <h4>E-Comerce</h4>
-                  <p className="text-justify ml-4">
+                  <h4 className="negrita">E-Comerce</h4>
+                  <p className="text-center ml-4">
                     Lleva tus artesanías sostenibles al mundo. ¡Vende online y
                     alcanza nuevos clientes!
                   </p>
@@ -77,10 +77,10 @@ const Servicio = () => {
                   <div className="flex items-center justify-center bg-[#E3AE3C] imgServiceMobile">
                     <img src="/ecomerce.png" alt="ecomerce" />
                   </div>
-                  <h4>orientacion</h4>
-                  <p className="text-justify mr-4">
-                    Para que tu marca artesanal
-                    brille. Planifica tu éxito con nosotros.
+                  <h4 className="negrita">Orientación</h4>
+                  <p className="text-center mr-4">
+                    Para que tu marca artesanal brille. Planifica tu éxito con
+                    nosotros.
                   </p>
                 </div>
               </div>
@@ -92,9 +92,9 @@ const Servicio = () => {
                   <div className="flex items-center justify-center bg-[#E3AE3C] imgServiceMobile">
                     <img src="/ecomerce.png" alt="ecomerce" />
                   </div>
-                  <h4>Capacitacion</h4>
-                  <p className="text-justify ml-4">
-                    Desarrolla tu negocio con nuestras capacitaciones. Aprende
+                  <h4 className="negrita">Capacitación</h4>
+                  <p className="text-center ml-4">
+                    Con nuestras capacitaciones. Aprende
                     estrategias para vender tus productos sostenibles con éxito.
                   </p>
                 </div>
@@ -105,8 +105,8 @@ const Servicio = () => {
                   <div className="flex items-center justify-center bg-[#E3AE3C] imgServiceMobile">
                     <img src="/ecomerce.png" alt="ecomerce" />
                   </div>
-                  <h4>Comercio Exterior</h4>
-                  <p className="text-justify mr-4">
+                  <h4 className="negrita text-center">Comercio Exterior</h4>
+                  <p className="text-center mr-4">
                     Lleva la belleza de tus productos sostenibles más allá de
                     tus fronteras. Te ayudamos a exportar con éxito.
                   </p>
