@@ -4,6 +4,7 @@ import Header from "@/components/header/Header";
 import HeroeSection from "@/pages/heroe/HeroeSection";
 import SplashScreen from "@/components/splash/SplashScreen";
 import Servicio from "@/pages/servicioPrestado/Servicio"
+import About from "@/pages/about/About";
 
 const Page = () => {
   const [showSplash, setShowSplash] = useState(true);
@@ -39,6 +40,11 @@ const Page = () => {
         </div>
         <div>
           <Servicio/>
+        </div>
+
+        <div>
+          <About/>
+
         </div>
 
       </div>
