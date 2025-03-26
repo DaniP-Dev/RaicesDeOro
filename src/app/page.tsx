@@ -7,6 +7,7 @@ import Servicio from "@/pages/servicioPrestado/Servicio";
 import About from "@/pages/about/About";
 import Aliados from "@/pages/aliados/Aliados";
 import GrupoT from "@/pages/grupoT/GrupoT";
+import Footer from "@/pages/footer/Footer";
 
 const Page = () => {
   const [showSplash, setShowSplash] = useState(true);
@@ -37,9 +38,11 @@ const Page = () => {
         <div className="w-full p-0 h-20 fixed">
           <Header />
         </div>
+
         <div className="w-full p-0">
           <HeroeSection />
         </div>
+
         <div>
           <Servicio />
         </div>
@@ -51,8 +54,13 @@ const Page = () => {
         <div>
           <Aliados />
         </div>
+
         <div>
           <GrupoT />
+        </div>
+
+        <div>
+          <Footer />
         </div>
       </div>
     </>
