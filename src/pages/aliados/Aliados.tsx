@@ -13,10 +13,10 @@ const Aliados = () => {
       <div className="lg:hidden pt-4">
         <h1 className="negrita text-center underline">Aliados</h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0 pb-5">
           {/* Tarjeta 1 */}
           <div className="grid grid-cols-1 bg-amber-100 m-3 redondeado">
-            <a href="https://www.instagram.com/circular__store/">
+            <a href="https://www.instagram.com/circular__store/" target="_blank" rel="noopener noreferrer">
               {/* Imagen de la empresa */}
               <img
                 src="/cStore.jpg"
@@ -32,7 +32,7 @@ const Aliados = () => {
 
           {/* Tarjeta 2 */}
           <div className="grid grid-cols-1 bg-amber-100 m-3 redondeado">
-            <a href="https://www.instagram.com/caminotribal.co/">
+            <a href="https://www.instagram.com/caminotribal.co/" target="_blank" rel="noopener noreferrer">
               {/* Imagen de la empresa */}
               <img
                 src="/caminoT.jpg"
@@ -48,7 +48,7 @@ const Aliados = () => {
 
           {/* Tarjeta 3 */}
           <div className="grid grid-cols-1 bg-amber-100 m-3 redondeado">
-            <a href="https://www.instagram.com/sheyma_accesorios/">
+            <a href="https://www.instagram.com/sheyma_accesorios/" target="_blank" rel="noopener noreferrer">
               {/* Imagen de la empresa */}
               <img
                 src="/sheyma.webp"
@@ -61,6 +61,7 @@ const Aliados = () => {
               </div>
             </a>
           </div>
+
         </div>
       </div>
     </>

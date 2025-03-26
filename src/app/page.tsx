@@ -6,6 +6,7 @@ import SplashScreen from "@/components/splash/SplashScreen";
 import Servicio from "@/pages/servicioPrestado/Servicio";
 import About from "@/pages/about/About";
 import Aliados from "@/pages/aliados/Aliados";
+import GrupoT from "@/pages/grupoT/GrupoT";
 
 const Page = () => {
   const [showSplash, setShowSplash] = useState(true);
@@ -49,6 +50,9 @@ const Page = () => {
 
         <div>
           <Aliados />
+        </div>
+        <div>
+          <GrupoT />
         </div>
       </div>
     </>

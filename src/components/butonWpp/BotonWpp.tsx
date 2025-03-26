@@ -10,8 +10,10 @@ const BotonWpp = () => {
   return (
     <>
       <a
-        className="containerWpp h-20 w-20" 
+        className="containerWpp h-20 w-20"
         href={`https://wa.me/${numeroTelefono}?text=${mensaje}`}
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <img src="/wpp.png" alt="" />
       </a>
