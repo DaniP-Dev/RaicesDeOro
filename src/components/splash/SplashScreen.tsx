@@ -7,24 +7,23 @@ interface SplashScreenProps {
 }
 
 const SplashScreen: React.FC<SplashScreenProps> = ({ onFinish }) => {
-  // Usamos un estado para activar el fade out global (al final del splash)
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    // No se controla la transición de fase por estado;
-    // en su lugar, ambos bloques se renderan y sus animaciones (definidas con delay en CSS)
-    // inician en el momento deseado (2.7 s) para lograr el crossfade.
+    document.body.style.overflow = "hidden";
     const fadeOutTimer = setTimeout(() => {
       setFadeOut(true);
     }, 5500);
 
     const finishTimer = setTimeout(() => {
+      document.body.style.overflow = "";
       onFinish();
     }, 6000);
 
     return () => {
       clearTimeout(fadeOutTimer);
       clearTimeout(finishTimer);
+      document.body.style.overflow = "";
     };
   }, [onFinish]);
 
@@ -33,18 +32,13 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onFinish }) => {
       className={`splash-container${fadeOut ? " fade-out" : ""}`}
       aria-label="Pantalla de bienvenida"
     >
-      {/* <button className="skip-button p-2" onClick={onFinish}>
-        Saltar
-      </button> */}
-      
-      {/* Fase 1: Texto en dos líneas fijas */}
+      {/* Contenido del splash */}
       <div className="phase phase1">
         <p className="phase1-text">
           <span className="line1">Raíces de Oro</span>
           <span className="line2">Tesoros culturales Hechos a Mano</span>
         </p>
       </div>
-      {/* Fase 2: Logo y subtítulo */}
       <div className="phase phase2">
         <img src="/Raices.png" alt="Logo de raíces" className="logo" />
         <h2 className="subtitle">Crezcamos Juntos...</h2>
