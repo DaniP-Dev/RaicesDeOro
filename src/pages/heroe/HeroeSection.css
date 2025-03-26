@@ -20,3 +20,54 @@
   background-size: cover;
   background-position: center;
 }
+
+@font-face {
+  font-family: "Floral"; /* Nombre que asignarás a la fuente */
+  src: url("/fonts/FloralpersonaluseBold-2OYod.otf") format("truetype");
+}
+.letraFloral {
+  font-family: "Floral", sans-serif;
+  font-size: 90px;
+  color: #ca2742;
+  text-shadow: -1px -1px 0 #FBAE17, 1px -1px 0 rgb(176, 115, 17), -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+@keyframes vibrar {
+  0% {
+    transform: translateY(1);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+  75% {
+    transform: translateX(-7px);
+  }
+  100% {
+    transform: translateY(2);
+  }
+}
+
+.boton-vibrante {
+  background-color: #FBAE17; /* Color del botón */
+  font-family: "Floral";
+  color: #ca2742;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px ;
+  cursor: pointer;
+  box-shadow: -1px -1px 0 #ca2742, 1px -1px 0 #ca2742, -1px 1px 0 white,
+    1px 1px 0 white;
+
+  /* Aplicar la animación */
+  animation: vibrar 1s infinite;
+}
+
+.bordeH {
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}

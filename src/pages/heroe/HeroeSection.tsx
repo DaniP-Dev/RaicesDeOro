@@ -5,66 +5,40 @@ const HeroeSection = () => {
   return (
     <>
       {/* Sección visible en dispositivos móviles */}
-      <div className="d-block d-lg-none hero-section hero-mobile w-full">
-        <div
-          className="pt-60 flex flex-col items-center justify-center text-center"
-          
-        >
-          {/* inicio contenido Hero */}
-          <h1 className="text-3xl font-bold mb-4">
-            ¡Bienvenido a Raíces de Oro By KaRu!
-          </h1>
-
-          {/* Descripción o subtítulo */}
-          <p className="text-lg text-gray-300 mb-6">
-            Descubre nuestra bisutería artesanal hecha a mano con materiales
-            reciclados y sostenibles. Estamos dedicados a empoderar a mujeres en
-            comunidades vulnerables, promover la moda sostenible y llevar los
-            talentos y emprendimientos locales hacia un impacto global.
-          </p>
-
-          {/* Botones */}
-          <div className="flex space-x-4">
-            <button className="px-4 py-2 bg-primary text-white rounded-md shadow-lg">
-              ¡Quiero Crecer!
-            </button>
+      <div className="lg:hidden">
+        <div className=" hero-section hero-mobile">
+          <div>
+            <h1 className="letraFloral borroso">Raíces</h1>
+            <h1 className="letraFloral borroso">de</h1>
+            <h1 className="letraFloral borroso">Oro</h1>
+            <h3 className="bordeH px-3">
+              Es momento de expandir tu negocio a los mercados cercanos y llevar
+              tus ideas al extranjero.
+            </h3>
+            <a
+              href="https://www.instagram.com/raicesdeorocol/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="boton-vibrante">Inicia Aqui</button>
+            </a>
           </div>
-          {/* fin contenido Hero */}
         </div>
       </div>
 
       {/* Sección visible en computadoras */}
-      <div className="d-none d-lg-block hero-section hero-desktop ">
-        <div
-          className="pt-60 flex flex-col items-center justify-center text-center"
-          style={{
-            backgroundImage: "url('your-image.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            color: "white",
-            textShadow: "0px 2px 4px rgba(0, 0, 0, 0.8)",
-          }}
-        >
-          {/* inicio contenido Hero */}
-          <h1 className="text-3xl font-bold mb-4">
-            ¡Bienvenido a Raíces de Oro By KaRu!
-          </h1>
-
-          {/* Descripción o subtítulo */}
-          <p className="text-lg text-gray-300 mb-6">
-            Descubre nuestra bisutería artesanal hecha a mano con materiales
-            reciclados y sostenibles. Estamos dedicados a empoderar a mujeres en
-            comunidades vulnerables, promover la moda sostenible y llevar los
-            talentos y emprendimientos locales hacia un impacto global.
-          </p>
-
-          {/* Botones */}
-          <div className="flex space-x-4">
-            <button className="px-4 py-2 bg-primary text-white rounded-md shadow-lg">
-              ¡Quiero Crecer!
-            </button>
+      <div className="max-md:hidden">
+        <div className="hero-section hero-desktop flex justify-center items-center bg-cover bg-center h-screen">
+          <div className="text-center text-white">
+            <h1 className="text-6xl font-bold mb-4 letraFloral">
+              Raíces de Oro
+            </h1>
+            <h3 className="text-xl mb-6 bordeH px-6">
+              Es momento de expandir tu negocio a los mercados cercanos y llevar
+              tus ideas al extranjero.
+            </h3>
+                    
           </div>
-          {/* fin contenido Hero */}
         </div>
       </div>
     </>
