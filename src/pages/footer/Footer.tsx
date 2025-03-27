@@ -11,7 +11,7 @@ const Footer = () => {
           <p>
             © 2025 DaniDev. Todos los derechos reservados.
             <br />
-            Créale presentación web a tu negocio desde $300.000
+            Créale presentación web a tu negocio!
             <br />
             ↓Links del creador de la pagina↓
           </p>

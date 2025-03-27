@@ -26,9 +26,13 @@ body {
 }
 
 @font-face {
-  font-family: "MiTipografia";
-  src: url("/Fonts/FloralpersonaluseBold-2OYod.otf") format("otf"),
-    url("/Fonts/FloralpersonaluseBold-K7wry.otf") format("otf");
-  font-weight: normal;
-  font-style: normal;
+  font-family: "Floral"; /* Nombre que asignarás a la fuente */
+  src: url("/fonts/FloralpersonaluseBold-2OYod.otf") format("truetype");
+}
+.letraFloral {
+  font-family: "Floral", sans-serif;
+  font-size: 90px;
+  color: #ca2742;
+  text-shadow: -1px -1px 0 #fbae17, 1px -1px 0 rgb(176, 115, 17),
+    -1px 1px 0 white, 1px 1px 0 white;
 }
