@@ -27,8 +27,8 @@ body {
 
 @font-face {
   font-family: "MiTipografia";
-  src: url("/fonts/FloralpersonaluseBold-2OYod.otf") format("otf"),
-    url("/fonts/FloralpersonaluseBold-K7wry.otf") format("otf");
+  src: url("/Fonts/FloralpersonaluseBold-2OYod.otf") format("otf"),
+    url("/Fonts/FloralpersonaluseBold-K7wry.otf") format("otf");
   font-weight: normal;
   font-style: normal;
 }
